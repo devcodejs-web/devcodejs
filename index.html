@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>DevCodeJs</title>
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@100;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="shortcut icon" href="static/images/logo.png" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="static/css/generalize.css">
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/cards.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container container">
+            <a href="/" class="header__brand">
+                <img src="static/images/logo.png" alt="Logo" class="header__logo-img">
+                <span class="state">Dev</span><span class="orion">Code</span><span class="state">Js</span>
+            </a>
+            <nav class="header__links">
+                <a href="#asesoria">Asesoría</a>
+                <a href="#servicios">Servicios</a>
+                <a href="/nosotros">Sobre nosotros</a>
+                <a href="https://wa.me/595987148590?text=Hola%20DevCodeJs,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20desarrollo%20web."
+                    class="signup">Contacto</a>
+            </nav>
+            <div class="header__menu-btn" id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR MÓVIL -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <a href="/" class="sidebar__brand">
+                <img src="static/images/logo.png" alt="Logo" class="sidebar__logo-img">
+                <span class="state">Dev</span><span class="orion">Code</span><span class="state">Js</span>
+            </a>
+        </div>
+        <a href="#asesoria">Asesoría</a>
+        <a href="#servicios">Servicios</a>
+        <a href="/nosotros">Sobre nosotros</a>
+        <a href="https://wa.me/595987148590?text=Hola%20DevCodeJs,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20desarrollo%20web." class="signup">Contacto</a>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero__content container">
+            <div class="hero__text">
+                <h1 class="hero__title">Tu competencia ya está captando a tus clientes</h1>
+                <p class="hero__subtitle">
+                    Sin una web sólida, una app o automatización inteligente, tu negocio pierde ventas todos los días.
+                    Creamos soluciones a medida para que vuelvas a competir y crecer.
+                </p>
+                <a href="https://wa.me/595987148590?text=Hola%20DevCodeJs,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20desarrollo%20web." class="hero__btn">Solicitar presupuesto</a>
+            </div>
+            <div class="hero__image">
+                <img src="static/images/hero-dev.svg" alt="Desarrollo digital" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DESARROLLO WEB -->
+    <section class="webdev container" aria-labelledby="webdev-title" id="servicios">
+        <h2 id="webdev-title" class="intro__title webdev__title">Desarrollo Web</h2>
+        <p class="webdev__subtitle">Elegí el plan que mejor se adapte a tus necesidades digitales</p>
+
+        <div class="webdev__grid">
+
+            <div class="webdev__card">
+                <img src="static/images/webservice/landing-icon.webp" alt="Landing Page" class="webdev__icon"
+                    loading="lazy">
+                <h3 class="webdev__name">Landing Page</h3>
+                <ul class="webdev__features">
+                    <li><i class='bx bx-check'></i> Hasta 1 página web</li>
+                    <li><i class='bx bx-check'></i> Diseño moderno y responsive</li>
+                    <li><i class='bx bx-check'></i> Optimización SEO básica</li>
+                    <li><i class='bx bx-check'></i> Formulario de contacto</li>
+                    <li><i class='bx bx-check'></i> Seguridad Anti Spam y DDoS</li>
+                    <li><i class='bx bx-check'></i> Hasta 10 secciones</li>
+                </ul>
+                <a href="/servicios/landing-page.html" class="webdev__btn btn-contrat">Ver más</a>
+            </div>
+
+            <div class="webdev__card webdev__card--highlight">
+                <span class="webdev__badge">Más demandado</span>
+                <img src="static/images/webservice/institucional-icon.webp" alt="Web Institucional" class="webdev__icon"
+                    loading="lazy">
+                <h3 class="webdev__name">Web Institucional</h3>
+                <ul class="webdev__features">
+                    <li><i class='bx bx-check'></i> Hasta 30 páginas web</li>
+                    <li><i class='bx bx-check'></i> Diseño corporativo profesional</li>
+                    <li><i class='bx bx-check'></i> Optimización SEO avanzada</li>
+                    <li><i class='bx bx-check'></i> Formulario de contacto</li>
+                    <li><i class='bx bx-check'></i> Seguridad Anti Spam y DDoS</li>
+                    <li><i class='bx bx-check'></i> Integración con Google Analytics</li>
+                </ul>
+                <a href="/servicios/web-institucional.html" class="webdev__btn btn-contrat">Ver más</a>
+            </div>
+
+            <div class="webdev__card">
+                <img src="static/images/webservice/crm-icon.webp" alt="CRM" class="webdev__icon" loading="lazy">
+                <h3 class="webdev__name">CRM</h3>
+                <ul class="webdev__features">
+                    <li><i class='bx bx-check'></i> Acceso multiusuario</li>
+                    <li><i class='bx bx-check'></i> División por roles</li>
+                    <li><i class='bx bx-check'></i> Transferencia de archivos</li>
+                    <li><i class='bx bx-check'></i> Gestión de clientes y ventas</li>
+                    <li><i class='bx bx-check'></i> Reportes y análisis de datos</li>
+                    <li><i class='bx bx-check'></i> Integración con correo y chat</li>
+                </ul>
+                <a href="/servicios/crm.html" class="webdev__btn btn-contrat">Ver más</a>
+            </div>
+
+            <div class="webdev__card">
+                <img src="static/images/webservice/whatsapp-bot.webp" alt="Sistema de bots de WhatsApp"
+                    class="webdev__icon" loading="lazy">
+                <h3 class="webdev__name">Bot IA para WhatsApp</h3>
+                <ul class="webdev__features">
+                    <li><i class='bx bx-check'></i> Integración con ChatGPT</li>
+                    <li><i class='bx bx-check'></i> Atención automática a clientes</li>
+                    <li><i class='bx bx-check'></i> Respuestas personalizadas</li>
+                    <li><i class='bx bx-check'></i> Derivación a asesores</li>
+                    <li><i class='bx bx-check'></i> Gestión de consultas frecuentes</li>
+                    <li><i class='bx bx-check'></i> Integración con bases de datos</li>
+                </ul>
+                <a href="/servicios/whatsapp-bot.html" class="webdev__btn btn-contrat">Ver más</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DESARROLLO DE APPS -->
+    <section class="appdev container" aria-labelledby="appdev-title" id="android">
+        <div class="appdev__grid">
+            <div class="appdev__text">
+                <h2 id="appdev-title" class="intro__title appdev__title">Desarrollo de Apps</h2>
+                <p class="appdev__subtitle">
+                    Creamos aplicaciones móviles modernas, atractivas y altamente funcionales para dispositivos Android,
+                    diseñadas a la medida de tu negocio. Optimizada para ofrecer la mejor experiencia al usuario
+                    y lista para publicarse en <span class="text-primary">PlayStore</span>, ayudándote a llegar a más
+                    clientes y potenciar tu presencia digital.
+                </p>
+                <a href="https://wa.me/595987148590?text=Hola%20DevCodeJs,%20quisiera%20recibir%20un%20presupuesto%20para%20el%20desarrollo%20de%20una%20aplicaci%C3%B3n%20Android%20a%20medida." class="appdev__btn btn-contrat">Solicitar desarrollo</a>
+            </div>
+            <div class="appdev__image">
+                <img src="static/images/android.svg" alt="App Android" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NUESTRAS TECNOLOGÍAS -->
+    <section class="tech" aria-labelledby="tech-title">
+        <h2 id="tech-title" class="intro__title tech__title">Nuestras Tecnologías</h2>
+        <p class="tech__subtitle">Trabajamos con una amplia variedad de lenguajes y herramientas para ofrecer soluciones
+            modernas y eficientes.</p>
+
+        <div class="tech__grid">
+
+            <div class="tech__category">
+                <h3 class="tech__category-title">Lenguajes</h3>
+                <div class="tech__items">
+                    <div class="tech__card">
+                        <img src="static/images/tech/html.webp" alt="HTML" loading="lazy">
+                        <span>HTML</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/css.svg" alt="CSS" loading="lazy">
+                        <span>CSS</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/js.webp" alt="JavaScript" loading="lazy">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/php.webp" alt="PHP" loading="lazy">
+                        <span>PHP</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/python.webp" alt="Python" loading="lazy">
+                        <span>Python</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/sql.svg" alt="SQL" loading="lazy">
+                        <span>SQL</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/rust.webp" alt="Rust" loading="lazy">
+                        <span>Rust</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/kotlin.webp" alt="Kotlin" loading="lazy">
+                        <span>Kotlin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech__category">
+                <h3 class="tech__category-title">Herramientas</h3>
+                <div class="tech__items">
+                    <div class="tech__card">
+                        <img src="static/images/tech/vscode.webp" alt="VSCode" loading="lazy">
+                        <span>VSCode</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/androidstudio.webp" alt="Android Studio" loading="lazy">
+                        <span>A. Studio</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/figma.webp" alt="Figma" loading="lazy">
+                        <span>Figma</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/postman.svg" alt="Postman" loading="lazy">
+                        <span>Postman</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/docker.webp" alt="Docker" loading="lazy">
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/linux.webp" alt="Linux" loading="lazy">
+                        <span>Linux</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/git.webp" alt="Git" loading="lazy">
+                        <span>Git</span>
+                    </div>
+                    <div class="tech__card">
+                        <img src="static/images/tech/github.webp" alt="GitHub" loading="lazy">
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="impulse" id="Bussimpulse">
+        <canvas class="impulse__particles" id="impulse-particles"></canvas>
+        <div class="impulse__overlay"></div>
+        <div class="impulse__content container">
+            <img class="impulse__logo" src="static/images/hero-logo.webp" alt="Logo">
+            <h2 class="impulse__title">Impulsá tu <span class="text-primary">empresa</span></h2>
+            <p class="impulse__subtitle">
+                Transformamos tu presencia digital con soluciones modernas: webs, apps y bots que te permiten
+                ahorrar tiempo y aumentar tus ingresos.
+            </p>
+            <div class="btns">
+                <a href="https://wa.me/595987148590?text=Hola%20DevCodeJs,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20desarrollo%20web." class="impulse__btn">Contactar ahora</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="appdev container" aria-labelledby="appdev-title">
+        <div class="appdev__grid">
+            <div class="appdev__text">
+                <h2 id="asesoria" class="intro__title appdev__title">Asesoría</h2>
+                <p class="appdev__subtitle">
+                    Agendá una <strong>reunión gratuita</strong> con nuestro equipo para analizar tus necesidades,
+                    explorar oportunidades y diseñar soluciones adaptadas, funcionales y estratégicas, listas para
+                    potenciar tu crecimiento empresarial.
+                </p>
+                <a href="https://wa.me/595987148590?text=Hola%20DevCodeJs,%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20para%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." class="appdev__btn btn-contrat">Agendar reunión gratuita</a>
+            </div>
+            <div class="appdev__image">
+                <img src="static/images/asesoria.svg" alt="App Android" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <button class="floating-btn whatsapp-btn">
+            <i class="bx bxl-whatsapp"></i>
+        </button>
+    </div>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li><a href="#servicios">Planes Web</a></li>
+                            <li><a href="#android">Planes Android</a></li>
+                            <li><a href="https://stateorion.com">Hosting & VPS</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Acerca de</h3>
+                        <ul>
+                            <li><a href="/nosotros">Nosotros</a></li>
+                            <li><a href="/terminos/">Términos</a></li>
+                            <li><a href="/privacidad">Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>DevCodeJs</h3>
+                        <p>Somos una agencia digital dedicada a desarrollar sitios web, aplicaciones móviles y
+                            soluciones que ayudan a empresas y negocios a crecer en el mundo digital. Combinamos
+                            creatividad, tecnología y funcionalidad para ofrecer productos modernos y adaptados a cada
+                            cliente.</p>
+                    </div>
+                    <div class="col item social">
+                        <a target="_blank" href="https://instagram.com/devcodejs.py"><i
+                                class="bx bxl-instagram"></i></a>
+                        <a href="mailto:contacto@devcodejs.com"><i class="bx bx-envelope"></i></a>
+                        <a target="_blank" href="https://wa.me/595987148590?text=Hola%20DevCodeJs,%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20desarrollo%20web."><i class="bx bxl-whatsapp"></i></a>
+                    </div>
+                </div>
+                <p class="copyright"></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="static/js/particles.js"></script>
+    <script src="static/js/menu.js"></script>
+    <script src="static/js/year.js"></script>
+    <script src="static/js/animations.js"></script>
+
+    <script>
+        const header = document.querySelector('.header');
+        const bussImpulse = document.getElementById('Bussimpulse');
+
+        function updateHeader() {
+            const sectionTop = bussImpulse.offsetTop;
+            const sectionBottom = sectionTop + bussImpulse.offsetHeight;
+            const scrollY = window.scrollY || window.pageYOffset;
+
+            if (scrollY >= sectionTop && scrollY < sectionBottom) {
+                header.classList.add('header--transparent');
+                header.classList.remove('header--scrolled');
+            } else {
+                header.classList.remove('header--transparent');
+                header.classList.add('header--scrolled');
+            }
+        }
+
+        updateHeader();
+        window.addEventListener('scroll', updateHeader);
+        window.addEventListener('resize', updateHeader);
+    </script>
+</body>
+
+</html>

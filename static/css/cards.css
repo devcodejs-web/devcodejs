@@ -1,0 +1,439 @@
+/* =========================
+   SECCIÓN PLANES
+========================= */
+
+.webdev {
+    background-color: var(--color-surface);
+}
+
+.plans {
+    padding-block: clamp(3rem, 6vw, 5rem);
+    padding-inline: 1rem;
+    text-align: center;
+}
+
+.plans__title {
+    color: var(--color-text-dark);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.plans__subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: 2rem;
+    color: var(--color-text-muted);
+}
+
+/* =========================
+   GRID DE PLANES
+========================= */
+
+.plans__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+@media (max-width: 1200px) {
+    .plans__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .plans__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   TARJETA PLAN
+========================= */
+
+.plans__card {
+    position: relative;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.plans__card--highlight {
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 25px rgba(72, 0, 255, 0.25);
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.plans__badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   NOMBRE Y PRECIO
+========================= */
+
+.plans__name {
+    font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-dark);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.plans__name::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.plans__price {
+    font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.plans__price .gs,
+.plans__price .mes {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.plans__features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+    text-align: left;
+}
+
+.plans__features li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--color-text-muted);
+}
+
+.plans__features li i {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.plans__btn {
+    align-self: center;
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.75rem;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
+
+/* =========================
+   TABS – SEGMENTED CONTROL
+========================= */
+
+.plans__tabs {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.25rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+/* Slider animado */
+.plans__tabs::before {
+    content: "";
+    position: absolute;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+    width: calc(50% - 0.25rem);
+    background-color: var(--color-primary);
+    border-radius: 999px;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+/* Segundo tab activo */
+.plans__tabs:has(.plans__tab-btn:nth-child(2).plans__tab-btn--active)::before {
+    transform: translateX(100%);
+}
+
+/* Botones */
+.plans__tab-btn {
+    position: relative;
+    z-index: 1;
+    border: none;
+    background: none;
+    padding: clamp(0.6rem, 2.5vw, 0.8rem)
+             clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.plans__tab-btn--active {
+    color: #fff;
+}
+
+.plans__tab-btn:not(.plans__tab-btn--active):hover {
+    color: var(--color-text-dark);
+}
+
+/* =========================
+   TAB CONTENT (FIX CLAVE)
+========================= */
+
+.plans__tab-content {
+    display: none;
+}
+
+.plans__tab-content--active {
+    display: block;
+}
+
+/* =========================
+   EXTRAS
+========================= */
+
+.plans__extras {
+    max-width: 1100px;
+    margin: clamp(2rem, 6vw, 3rem) auto 0;
+    padding: clamp(1.2rem, 4vw, 2rem);
+    background-color: var(--color-surface-alt);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.plans__extras-title {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+}
+
+.plans__extras-list {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .plans__extras-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .plans__extras-list {
+        grid-template-columns: 1fr;
+    }
+
+    .plans__extras-title {
+        text-align: left;
+    }
+}
+
+.plans__extras-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--color-text-muted);
+}
+
+.plans__extras-list li i {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+}
+
+
+/* =========================
+   SECCIÓN DESARROLLO WEB
+========================= */
+
+.webdev {
+    padding-block: clamp(3rem, 6vw, 5rem);
+    text-align: center;
+}
+
+.webdev__title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.webdev__subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+}
+
+/* GRID DE CARDS */
+.webdev__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+@media (max-width: 1200px) {
+    .webdev__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .webdev__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.webdev.container {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* CARD */
+.webdev__card {
+    position: relative;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.webdev__card--highlight {
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 25px rgba(149, 0, 255, 0.25);
+}
+
+/* BADGE */
+.webdev__badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* ICONO */
+.webdev__icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+}
+
+/* NOMBRE */
+.webdev__name {
+    font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+    position: relative;
+}
+
+.webdev__name::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+/* FEATURES */
+.webdev__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    text-align: left;
+}
+
+.webdev__features li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--color-text-muted);
+}
+
+.webdev__features li i {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+/* BOTÓN */
+.webdev__btn {
+    align-self: center;
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.75rem;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
