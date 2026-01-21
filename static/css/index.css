@@ -462,3 +462,87 @@
 .appdev__btn:hover {
     color: #fff;
 }
+
+
+/* --- Trust Section --- */
+.trust {
+    padding: 4rem 1.5rem;
+    background-color: var(--color-surface);
+    overflow: hidden;
+}
+
+.trust__title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.trust__carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.trust__track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: max-content;
+    animation: trust-scroll 25s linear infinite;
+}
+
+.trust__item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trust__item img {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+.trust__item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+
+.trust__item img.renew {
+    border-radius: 50%;
+}
+
+/* Animación infinita */
+@keyframes trust-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .trust__track {
+        gap: 2.5rem;
+        animation-duration: 20s;
+    }
+
+    .trust__item img {
+        max-height: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trust__item img {
+        max-height: 45px;
+    }
+}

@@ -213,43 +213,6 @@ a {
     text-decoration: none !important;
 }
 
-
-/* Animaciones generales al entrar */
-.animate {
-    opacity: 0;
-    transform: translateY(20px); /* desplazamiento menor */
-    transition: all 0.4s ease-out; /* más rápido */
-}
-
-/* Elementos visibles */
-.animate.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Animación para hero */
-.hero__content.animate {
-    transform: translateY(30px);
-}
-
-.hero__content.animate.show {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.5s ease-out;
-}
-
-/* Animación en cascada para cards y tech */
-.webdev__card,
-.tech__card,
-.appdev__text,
-.appdev__image {
-    transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-* {
-    outline: none;
-}
-
 .floating-btn.whatsapp-btn a {
     color: #fff;
 }
